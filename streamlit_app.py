@@ -9,6 +9,7 @@ def df(x):
 #main
 err=1000
 x=st.number_input("Enter a initial condition")
+plt.plot(x,f(x),'ko')
 k=0
 while(err>=0.0001):
     k=k+1
@@ -19,7 +20,7 @@ st.write('Root is',xnp1)
 st.write('No. of iteration',k)
 xi = np.linspace(-5,5,100)
 plt.plot(xi,f(xi))
-plt.plot(xnp1,f(xnp1),'rg')
+plt.plot(xnp1,f(xnp1),'ro')
 plt.grid(True)
 plt.xlabel('x')
 plt.ylabel('y=f(x)')
